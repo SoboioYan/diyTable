@@ -8,6 +8,7 @@
       :max-height="options.maxHeight"
       :border="options.border"
       :size="options.size"
+      :stripe="optiones.stripe"
       @selection-change="handleSelectionChange"
       v-loading="loading"
     >
@@ -77,6 +78,9 @@ export default {
     handleSelectionChange(val) {
       this.$emit("handleSelectionChange", val);
     }
+  },
+  created() {
+    this.handleSizeChange();
   }
 };
 </script>
