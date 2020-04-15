@@ -8,7 +8,7 @@
       :max-height="options.maxHeight"
       :border="options.border"
       :size="options.size"
-      :stripe="optiones.stripe"
+      :stripe="options.stripe"
       @selection-change="handleSelectionChange"
       v-loading="loading"
     >
