@@ -72,8 +72,12 @@ export default {
   methods: {
     // 表格翻页
     handleSizeChange(page) {
-      this.pages.page = page;
-      this.$emit("on-load", this.pages);
+      if (this.pages) {
+        this.pages.page = page;
+        this.$emit("on-load", this.pages);
+      } else {
+        this.$emit("on-load");
+      }
     },
     handleSelectionChange(val) {
       this.$emit("handleSelectionChange", val);
